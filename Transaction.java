@@ -6,6 +6,8 @@ public class Transaction {
 	 public void Deposit(double amt,Account a) {
 			if(amt > 0) {
 				double b = a.getBal()+amt;
+				a.setBal(b);
+
 				System.out.println("Deposit Success");
 			}
 			else {
@@ -17,6 +19,8 @@ public class Transaction {
 	 public void Withdraw(double amt,Account a) {
 			if (a.getBal() >= amt) {
 			 double b = a.getBal() - amt;
+				a.setBal(b);
+
 			 
 				System.out.println("Withdraw Success");
 			}
